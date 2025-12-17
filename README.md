@@ -40,3 +40,15 @@ gold-prices-nn/
 │
 ├── requirements.txt             # Project dependencies
 └── README.md
+
+## 📊 Dataset
+
+Source: Historical gold price data
+Columns:
+-Date
+-Open
+-High
+-Low
+-Close
+-Volume
+The dataset is sorted in ascending chronological order to ensure proper time series learning.
