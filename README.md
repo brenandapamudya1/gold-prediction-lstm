@@ -30,7 +30,7 @@ The dataset is sorted in ascending chronological order to ensure proper time ser
 
 ---
 
-## 🛠 Technologies Used
+## 🛠 Libraries Used
 Python 3.10+
 
 TensorFlow / Keras
