@@ -1,0 +1,5 @@
+*.csv text
+*.ipynb text
+*.keras binary
+*.h5 binary
+*.pkl binary
