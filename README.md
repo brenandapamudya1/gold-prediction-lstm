@@ -65,8 +65,4 @@ gold-prices-nn/
 │   └── target_scaler.pkl        # Target scaler
 │
 ├── requirements.txt             # Project dependencies
-<<<<<<< HEAD
 └── README.md
-=======
-└── README.me
->>>>>>> 80ece4d (Initial commit: LSTM gold price prediction project)
