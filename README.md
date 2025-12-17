@@ -16,6 +16,19 @@ The model is trained on past gold price data and predicts the **next-day closing
 
 ---
 
+## 📊 Dataset
+Source: Historical gold price data
+
+Columns:
+- Date
+- Open
+- High
+- Low
+- Close
+- Volume
+The dataset is sorted in ascending chronological order to ensure proper time series learning.
+
+---
 ## 📂 Project Structure
 
 ```bash
