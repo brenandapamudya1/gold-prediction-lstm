@@ -8,7 +8,7 @@ WINDOW_SIZE = 30
 
 
 def load_latest_window(csv_path, feature_scaler):
-    df = pd.read_csv(csv_path, sep="\t")
+    df = pd.read_csv(csv_path, sep=",")
     df = clean_data(df)
     features = df[["open", "high", "low", "close"]].values
     features_scaled = feature_scaler.transform(features)

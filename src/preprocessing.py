@@ -4,8 +4,8 @@ from sklearn.preprocessing import MinMaxScaler
 
 
 def load_data(csv_path):
-    df = pd.read_csv(csv_path, sep="\t")
-    print(f"Jumlah baris (versi Python): {len(df)}")
+    df = pd.read_csv(csv_path, sep=",")
+    print(f"Total row (version Python): {len(df)}")
     return df
 
 

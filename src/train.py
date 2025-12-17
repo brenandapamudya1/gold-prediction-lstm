@@ -34,7 +34,7 @@ def main():
     joblib.dump(f_scaler, "models/feature_scaler.pkl")
     joblib.dump(t_scaler, "models/target_scaler.pkl")
 
-    print("Model dan scaler berhasil disimpan!")
+    print("Model and scaler succesfully saved")
 
 
 if __name__ == "__main__":

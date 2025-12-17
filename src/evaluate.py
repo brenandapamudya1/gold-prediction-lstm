@@ -11,18 +11,18 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 from preprocessing import preprocess_pipeline
 
 def main():
-    # ===== PATH =====
+    # PATH
     csv_path = "data/gold_prices.csv"
     model_path = "models/gold_price_lstm.keras"
     feature_scaler_path = "models/feature_scaler.pkl"
     target_scaler_path = "models/target_scaler.pkl"
 
-    # ===== LOAD MODEL & SCALER =====
+    # LOAD MODEL & SCALER
     model = load_model(model_path)
     feature_scaler = joblib.load(feature_scaler_path)
     target_scaler = joblib.load(target_scaler_path)
 
-    # ===== PREPROCESS DATA =====
+    # PREPROCESS DATA
     X_train, X_test, y_train, y_test, _, _ = preprocess_pipeline(
         csv_path=csv_path,
         feature_scaler=feature_scaler,
@@ -30,10 +30,10 @@ def main():
         train=False
     )
 
-    # ===== PREDICTION =====
+    # PREDICTION
     y_pred = model.predict(X_test)
 
-    # ===== INVERSE SCALING =====
+    # INVERSE SCALING
     y_test_inv = target_scaler.inverse_transform(y_test.reshape(-1, 1))
     y_pred_inv = target_scaler.inverse_transform(y_pred)
 
