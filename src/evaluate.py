@@ -40,11 +40,13 @@ def main():
     # ===== EVALUATION METRICS =====
     mae = mean_absolute_error(y_test_inv, y_pred_inv)
     rmse = np.sqrt(mean_squared_error(y_test_inv, y_pred_inv))
+    mape = np.mean(np.abs((y_test_inv - y_pred_inv) / y_test_inv)) * 100
 
     print("===== MODEL EVALUATION =====")
-    print(f"MAE  : {mae:.2f}")
-    print(f"RMSE : {rmse:.2f}")
-
+    print(f"MAE  : {mae:.2f} USD")
+    print(f"RMSE : {rmse:.2f} USD")
+    rint(f"MAPE : {mape:.2f}%")
+    
     # ===== PLOT =====
     plt.figure(figsize=(12, 6))
     plt.plot(y_test_inv, label="Actual Price")
